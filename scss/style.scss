@@ -1,0 +1,151 @@
+@use "sass:math";
+
+@import "null/fonts";
+@import "null/root";
+
+@import "null/null";
+@import "null/variable";
+@import "null/mixins";
+
+.wrapper {
+  min-height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(25, 29, 29);
+}
+.content {
+  flex: 1 1 auto;
+}
+
+$responsiveType: 2;
+
+@if ($responsiveType==2) {
+  // Чуйна
+  [class*="__container"] {
+    @if ($maxWidthContainer>0) {
+      max-width: toRem($containerWidth);
+      margin: 0 auto;
+    }
+    @if ($containerPadding>0) {
+      @if ($maxWidthContainer>0) {
+        padding: 0 toRem(math.div($containerPadding, 2));
+      } @else {
+        @include adaptiveValue(
+          "padding-left",
+          math.div($containerPadding, 2),
+          15
+        );
+        @include adaptiveValue(
+          "padding-right",
+          math.div($containerPadding, 2),
+          15
+        );
+      }
+    }
+  }
+} @else {
+  // Брейк-поїнтами
+  [class*="__container"] {
+    margin: 0 auto;
+    @if ($maxWidthContainer>0) {
+      max-width: toRem($containerWidth);
+    } @else {
+      @if ($containerPadding>0) {
+        padding: 0 toRem(math.div($containerPadding, 2));
+      }
+    }
+    @media (max-width: $pc) {
+      max-width: toRem(970);
+    }
+    @media (max-width: $tablet) {
+      max-width: toRem(750);
+    }
+    @media (max-width: $mobile) {
+      max-width: none;
+      @if ($containerPadding>0 and $maxWidthContainer>0) {
+        padding: 0 toRem(math.div($containerPadding, 2));
+      }
+    }
+  }
+}
+[class*="__link"] {
+  font-family: "Nunito";
+  font-weight: 400;
+  @include adaptiv-value("font-size", 16, 0, 0);
+  @include adaptiv-value("line-height", 22, 0, 0);
+  font-size: 16px;
+  line-height: 22px;
+  cursor: pointer;
+}
+
+h2 {
+  font-family: "Kanit";
+  font-weight: 400;
+  @include adaptiv-value("font-size", 40, 24, 0);
+  @include adaptiv-value("line-height", 60, 30, 0);
+  // font-size: 40px;
+  // line-height: 60px;
+}
+
+h3 {
+  /* about,  teams, blogs*/
+
+  font-family: "Kanit";
+  font-weight: 400;
+  @include adaptiv-value("font-size", 16, 0, 0);
+  @include adaptiv-value("line-height", 24, 22, 0);
+  font-size: 16px;
+  // line-height: 24px;
+  /* identical to box height */
+  color: #6d7d7d;
+}
+
+p {
+  font-family: "Nunito";
+  font-weight: 400;
+  @include adaptiv-value("font-size", 16, 0, 0);
+  @include adaptiv-value("line-height", 22, 20, 0);
+  font-size: 16px;
+  // line-height: 22px;
+}
+
+a {
+  /* learn more */
+
+  font-family: "Kanit";
+  font-weight: 400;
+  @include adaptiv-value("font-size", 16, 0, 0);
+  @include adaptiv-value("line-height", 24, 0, 0);
+  font-size: 16px;
+  line-height: 24px;
+  /* identical to box height */
+  letter-spacing: 0.43em;
+}
+
+button {
+  /* Button */
+  width: 229px;
+  height: 39px;
+  // border: 1px solid #6d7d7d;
+  border-radius: 100px;
+
+  /* GET STARTED  SUBSCRIBE LEARN ABOUT */
+
+  // width: 166px;
+  // height: 24px;
+  font-family: "Kanit";
+  font-weight: 400;
+  @include adaptiv-value("font-size", 16, 10, 0);
+  @include adaptiv-value("line-height", 24, 15, 0);
+  font-size: 16px;
+  // line-height: 24px;
+  /* identical to box height */
+  text-align: center;
+  letter-spacing: 0.43em;
+}
+
+@import "blocks/header";
+@import "blocks/footer";
+@import "blocks/about";
+@import "blocks/sectionTwo";

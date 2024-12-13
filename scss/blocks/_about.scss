@@ -1,0 +1,17 @@
+.about {
+  &__container {
+    display: flex;
+    flex-direction: column;
+    @include adaptiv-value("padding-top", 100, 0, 0);
+
+    h3 {
+    }
+
+    h2 {
+    }
+
+    p {
+      @include adaptiv-value("padding-top", 19, 0, 0);
+    }
+  }
+}
