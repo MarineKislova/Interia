@@ -1,0 +1,15 @@
+.section-five {
+
+    &__container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(255px, 1fr));
+        @include adaptiv-value("padding-top", 100, 35, 0);
+        
+    }
+
+    &__logo {
+        display: flex;
+        justify-content: center;
+        @include adaptiv-value("height", 98, 58, 0);
+    }
+}

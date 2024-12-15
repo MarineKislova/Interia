@@ -1,0 +1,57 @@
+.section-six {
+  &__container {
+    display: flex;
+    flex-direction: column;
+    @include adaptiv-value("padding-top", 100, 35, 0);
+  }
+
+  &__interior {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #212828;
+    @include adaptiv-value("padding-top", 47, 17, 0);
+    @include adaptiv-value("padding-bottom", 47, 17, 0);
+
+    @media (max-width: 642px) {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &__row {
+    @include adaptiv-value("width", 412, 290, 0);
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+
+    @media (max-width: 642px) {
+      align-items: center;
+    }
+  }
+
+  &__furniture {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #212828;
+    @include adaptiv-value("padding-top", 47, 17, 0);
+    @include adaptiv-value("padding-bottom", 47, 17, 0);
+
+    @media (max-width: 642px) {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &__landscape {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #212828;
+    @include adaptiv-value("padding-top", 47, 17, 0);
+    @include adaptiv-value("padding-bottom", 47, 17, 0);
+
+    @media (max-width: 642px) {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+}
