@@ -325,6 +325,7 @@ button {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  padding-top: calc(36px + 91 * (100vw - 320px) / 1600);
 }
 .footer__rowOne {
   display: -webkit-box;
@@ -334,35 +335,52 @@ button {
       -ms-flex-pack: justify;
           justify-content: space-between;
   background-color: #131616;
-  padding-top: calc(0px + 127 * (100vw - 320px) / 1600);
-  padding-bottom: calc(0px + 70 * (100vw - 320px) / 1600);
-  padding-top: 127px;
-  padding-bottom: 70px;
+  padding-bottom: calc(36px + 34 * (100vw - 320px) / 1600);
+}
+@media (max-width: 768px) {
+  .footer__rowOne {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
 }
 .footer__nav ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 55px;
+  gap: calc(15px + 40 * (100vw - 320px) / 1600);
 }
 .footer__rowTwo {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding-top: calc(0px + 97 * (100vw - 320px) / 1600);
-  padding-bottom: calc(0px + 158 * (100vw - 320px) / 1600);
-  padding-top: 97px;
-  padding-bottom: 158px;
+  padding-top: calc(6px + 91 * (100vw - 320px) / 1600);
+  padding-bottom: calc(36px + 122 * (100vw - 320px) / 1600);
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+@media (max-width: 768px) {
+  .footer__rowTwo {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    gap: 10px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
 }
 .footer__social {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: calc(0px + 30 * (100vw - 320px) / 1600);
-  gap: 30px;
+  gap: calc(5px + 25 * (100vw - 320px) / 1600);
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -384,13 +402,23 @@ button {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding-top: calc(0px + 52 * (100vw - 320px) / 1600);
-  padding-bottom: calc(0px + 49 * (100vw - 320px) / 1600);
-  padding-top: 52px;
-  padding-bottom: 49px;
+  padding-top: calc(6px + 46 * (100vw - 320px) / 1600);
+  padding-bottom: calc(36px + 13 * (100vw - 320px) / 1600);
+}
+@media (max-width: 768px) {
+  .footer__rowThree {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    gap: 10px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
 }
 .footer__copyright {
-  width: 383px;
+  width: calc(280px + 103 * (100vw - 320px) / 1600);
   height: 22px;
   font-family: "Nunito";
   font-weight: 400;
@@ -403,8 +431,7 @@ button {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  gap: calc(0px + 97 * (100vw - 320px) / 1600);
-  gap: 97px;
+  gap: calc(27px + 70 * (100vw - 320px) / 1600);
 }
 
 .about__container {
@@ -728,7 +755,6 @@ button {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  border-bottom: 1px solid #212828;
   padding-top: calc(17px + 30 * (100vw - 320px) / 1600);
   padding-bottom: calc(17px + 30 * (100vw - 320px) / 1600);
 }
@@ -752,7 +778,9 @@ button {
 
 .section-eight__container {
   padding-top: calc(35px + 65 * (100vw - 320px) / 1600);
+  padding-bottom: calc(21px + 65 * (100vw - 320px) / 1600);
   text-align: center;
+  border-bottom: 1px solid #212828;
 }
 .section-eight__row {
   display: -webkit-box;
@@ -783,4 +811,116 @@ button {
      object-fit: cover;
   border-radius: 10px;
   margin-bottom: 10px;
+}
+
+.section-nine__container {
+  padding-top: calc(35px + 65 * (100vw - 320px) / 1600);
+  padding-bottom: calc(21px + 65 * (100vw - 320px) / 1600);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+@media (max-width: 768px) {
+  .section-nine__container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 24px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+.section-nine__container form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 582px;
+  gap: 24px;
+}
+@media (max-width: 475px) {
+  .section-nine__container form {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+.section-nine__container input {
+  width: 100%;
+}
+.section-nine__container input::-webkit-input-placeholder {
+  border-bottom: 1px solid #6d7d7d;
+  font-family: "Nunito";
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+}
+.section-nine__container input::-moz-placeholder {
+  border-bottom: 1px solid #6d7d7d;
+  font-family: "Nunito";
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+}
+.section-nine__container input:-ms-input-placeholder {
+  border-bottom: 1px solid #6d7d7d;
+  font-family: "Nunito";
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+}
+.section-nine__container input::-ms-input-placeholder {
+  border-bottom: 1px solid #6d7d7d;
+  font-family: "Nunito";
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+}
+.section-nine__container input::placeholder {
+  border-bottom: 1px solid #6d7d7d;
+  font-family: "Nunito";
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+}
+.section-nine__container input:focus,
+.section-nine__container input :focus-visible,
+.section-nine__container input :focus-within {
+  outline: none;
+  border-bottom: 1px solid #6d7d7d;
+  color: #cbeded;
+  font-weight: 700;
+  background-color: rgb(25, 29, 29);
+}
+.section-nine__container input:focus::-webkit-input-placeholder, .section-nine__container input :focus-visible::-webkit-input-placeholder, .section-nine__container input :focus-within::-webkit-input-placeholder {
+  border: none;
+  background-color: rgb(25, 29, 29);
+}
+.section-nine__container input:focus::-moz-placeholder, .section-nine__container input :focus-visible::-moz-placeholder, .section-nine__container input :focus-within::-moz-placeholder {
+  border: none;
+  background-color: rgb(25, 29, 29);
+}
+.section-nine__container input:focus:-ms-input-placeholder, .section-nine__container input :focus-visible:-ms-input-placeholder, .section-nine__container input :focus-within:-ms-input-placeholder {
+  border: none;
+  background-color: rgb(25, 29, 29);
+}
+.section-nine__container input:focus::-ms-input-placeholder, .section-nine__container input :focus-visible::-ms-input-placeholder, .section-nine__container input :focus-within::-ms-input-placeholder {
+  border: none;
+  background-color: rgb(25, 29, 29);
+}
+.section-nine__container input:focus::placeholder,
+.section-nine__container input :focus-visible::placeholder,
+.section-nine__container input :focus-within::placeholder {
+  border: none;
+  background-color: rgb(25, 29, 29);
+}
+.section-nine__container button {
+  padding-left: 10px;
+  padding-right: 10px;
+  text-align: center;
 }/*# sourceMappingURL=style.css.map */

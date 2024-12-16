@@ -3,22 +3,25 @@
   &__container {
     display: flex;
     flex-direction: column;
+    @include adaptiv-value("padding-top", 127, 36, 0);
   }
 
   &__rowOne {
     display: flex;
     justify-content: space-between;
     background-color: #131616;
-    @include adaptiv-value("padding-top", 127, 0, 0);
-    @include adaptiv-value("padding-bottom", 70, 0, 0);
-    padding-top: 127px;
-    padding-bottom: 70px;
+    @include adaptiv-value("padding-bottom", 70, 36, 0);
+
+    @media (max-width: 768px) {
+      flex-direction: column-reverse;
+      align-items: center;
+    }
   }
 
   &__nav {
     ul {
       display: flex;
-      gap: 55px;
+      @include adaptiv-value("gap", 55, 15, 0);
     }
   }
 
@@ -27,17 +30,23 @@
 
   &__rowTwo {
     display: flex;
-    @include adaptiv-value("padding-top", 97, 0, 0);
-    @include adaptiv-value("padding-bottom", 158, 0, 0);
-    padding-top: 97px;
-    padding-bottom: 158px;
+    @include adaptiv-value("padding-top", 97, 6, 0);
+    @include adaptiv-value("padding-bottom", 158, 36, 0);
+    // padding-top: 97px;
+    // padding-bottom: 158px;
     justify-content: space-between;
+
+    @media (max-width: 768px) {
+      flex-direction: column-reverse;
+      gap: 10px;
+      align-items: center;
+    }
   }
 
   &__social {
     display: flex;
-    @include adaptiv-value("gap", 30, 0, 0);
-    gap: 30px;
+    @include adaptiv-value("gap", 30, 5, 0);
+    // gap: 30px;
     justify-content: space-between;
   }
 
@@ -52,14 +61,21 @@
     align-items: center;
     // gap: 44px;
     justify-content: space-between;
-    @include adaptiv-value("padding-top", 52, 0, 0);
-    @include adaptiv-value("padding-bottom", 49, 0, 0);
-    padding-top: 52px;
-    padding-bottom: 49px;
+    @include adaptiv-value("padding-top", 52, 6, 0);
+    @include adaptiv-value("padding-bottom", 49, 36, 0);
+    // padding-top: 52px;
+    // padding-bottom: 49px;
+
+    @media (max-width: 768px) {
+      flex-direction: column-reverse;
+      gap: 10px;
+      align-items: center;
+    }
   }
 
   &__copyright {
-    width: 383px;
+    @include adaptiv-value("width", 383, 280, 0);
+    // width: 383px;
     height: 22px;
     font-family: "Nunito";
     font-weight: 400;
@@ -71,7 +87,7 @@
 
   &__secure {
     display: inline-flex;
-    @include adaptiv-value("gap", 97, 0, 0);
-    gap: 97px;
+    @include adaptiv-value("gap", 97, 27, 0);
+    // gap: 97px;
   }
 }

@@ -1,7 +1,9 @@
 .section-eight {
   &__container {
     @include adaptiv-value("padding-top", 100, 35, 0);
+    @include adaptiv-value("padding-bottom", 86, 21, 0);
     text-align: center;
+    border-bottom: 1px solid #212828;
   }
 
   &__row {

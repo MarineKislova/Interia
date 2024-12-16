@@ -45,7 +45,7 @@
   &__landscape {
     display: flex;
     justify-content: space-between;
-    border-bottom: 1px solid #212828;
+    
     @include adaptiv-value("padding-top", 47, 17, 0);
     @include adaptiv-value("padding-bottom", 47, 17, 0);
 

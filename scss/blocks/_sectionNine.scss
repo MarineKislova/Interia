@@ -1,0 +1,57 @@
+.section-nine {
+  &__container {
+    @include adaptiv-value("padding-top", 100, 35, 0);
+    @include adaptiv-value("padding-bottom", 86, 21, 0);
+    display: flex;
+    justify-content: space-between;
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+      gap: 24px;
+      align-items: center;
+    }
+
+    form {
+      display: flex;
+      max-width: 582px;
+      gap: 24px;
+
+      @media (max-width: 475px) {
+        flex-direction: column;
+      }
+    }
+
+    input {
+      width: 100%;
+
+      &::placeholder {
+        border-bottom: 1px solid #6d7d7d;
+        font-family: "Nunito";
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 22px;
+      }
+
+      &:focus,
+      :focus-visible,
+      :focus-within {
+        outline: none;
+        border-bottom: 1px solid #6d7d7d;
+        color: #cbeded;
+        font-weight: 700;
+        background-color: rgb(25, 29, 29);
+
+        &::placeholder {
+          border: none;
+          background-color: rgb(25, 29, 29);
+        }
+      }
+    }
+
+    button {
+      padding-left: 10px;
+      padding-right: 10px;
+      text-align: center;
+    }
+  }
+}
