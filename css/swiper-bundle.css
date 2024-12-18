@@ -405,12 +405,12 @@
   transform: scale(0.33);
 }
 .swiper-pagination-bullet {
-  width: 10px;
+  width: 8px;
   height: 8px;
   display: inline-flex;
   border-radius: 10px;
   background: var(--swiper-pagination-bullet-inactive-color, #bcbbba);
-  opacity: var(--swiper-pagination-bullet-inactive-opacity, 1);
+  opacity: var(--swiper-pagination-bullet-inactive-opacity, 0.65);
 }
 button.swiper-pagination-bullet {
   border: none;

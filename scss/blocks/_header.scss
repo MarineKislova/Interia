@@ -1,8 +1,6 @@
 .header {
   &__container {
-    // @include adaptiv-value("height", 682, 282, 0);
     @include adaptiv-value("padding-top", 40, 5, 0);
-    // padding-top: 40px;
     position: relative;
     z-index: 2;
   }
@@ -12,7 +10,7 @@
     justify-content: space-between;
     align-self: center;
     align-items: center;
-    height: 42px;
+    @include adaptiv-value("height", 42, 32, 0);
     padding: 5px 20px;
     backdrop-filter: blur(6px) saturate(280%);
     background-color: rgba(255, 255, 255, 0.51);
@@ -22,11 +20,11 @@
 
     @media (max-width: 923px) {
       padding: 0px 10px;
-      height: 32px;
+      justify-content: space-between;
     }
 
     @media (max-width: 425px) {
-      backdrop-filter: blur(0px) saturate(280%);
+      backdrop-filter: blur(1px) saturate(80%);
     }
   }
 
@@ -38,6 +36,13 @@
       display: flex;
       align-self: center;
       align-items: center;
+      /* LOGO */
+      font-family: "Kanit";
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 24px;
+      /* identical to box height */
+      letter-spacing: 0.43em;
     }
   }
 
@@ -50,8 +55,13 @@
       align-items: center;
     }
 
-    @media (max-width: 923px) {
-      display: none;
+    button {
+      background-color: transparent;
+      border: none;
+      outline: none;
+      color: #000;
+      cursor: pointer;
+      transition: color 0.3s ease;
     }
   }
 
@@ -61,11 +71,17 @@
 
 .burger-menu {
   &__container {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
   }
 
   &__btn {
     max-width: 50px;
     border: none;
+    border-radius: initial;
   }
 
   @media (min-width: 924px) {
@@ -73,52 +89,96 @@
   }
 }
 
-.swiper {
-  // max-width: 1920px;
-  // height: 500px;
-  margin-left: auto;
-  margin-right: auto;
-  position: relative;
-  overflow: hidden;
-  z-index: 1;
-  display: flex;
-  margin-top: -82px;
-  // @include adaptiv-value("height", 642, 382, 0);
-}
+@media (max-width: 923px) {
+  .header__nav {
+    display: none;
+  }
+  .burger-menu {
+    display: flex;
 
-.swiper-wrapper {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-  display: flex;
-  transition-property: transform;
-  box-sizing: content-box;
-  @include adaptiv-value("height", 642, 382, 0);
- 
-}
+    &__btn {
+      z-index: 10;
+    }
 
-.swiper-slide {
-  flex-shrink: 0;
-  width: 100%;
-  height: 100%;
-  position: relative;
-  transition-property: transform;
-  // @include adaptiv-value("height", 682, 382, 0);
-  // @include adaptiv-value("width", 1920, 320, 0);
+    &__links {
+      display: none;
+      flex-direction: column;
+      position: fixed;
+      align-items: center;
+      height: 370px;
+      width: 290px;
+      top: 0;
+      right: 0;
+      z-index: 5;
+      padding: 50px 0px;
+      text-transform: uppercase;
+      font-family: "Kanit";
+      font-size: 22px;
+      color: #efa8a8;
+      font-weight: bold;
+      backdrop-filter: blur(16px) saturate(280%);
+      background-color: rgba(65, 58, 58, 0.91);
+      animation: burgerAnimation 0.5s;
+      row-gap: 30px;
+      border-top-left-radius: 10px;
+      border-bottom-left-radius: 10px;
+    }
 
-  img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    // object-position: center center;
-    transition: transform 0.3s;
-    filter: grayscale(1);
+    &__link {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 120px;
+      border-bottom: 1px solid #efa8a8;
+    }
   }
 }
 
-.swiper-pagination{
-  @media (max-width: 425px) {
-   display: none;
+@keyframes burgerAnimation {
+  from {
+    opacity: 0.2;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.header {
+  &__slider {
+    position: relative;
+    margin-top: -82px;
+  }
+
+  &__slider-container {
+  }
+
+  &__slider-slide {
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .swiper {
+  }
+  .swiper-wrapper {
+  }
+  .swiper-slide {
+  }
+  .swiper-pagination {
+    position: absolute;
+    bottom: -5;
+    width: 100%;
+    height: 10px;
+    border-radius: 10px;
+    z-index: 999;
+  }
+
+  .swiper-pagination-bullet {
+    @include adaptiv-value("width", 40, 5, 0);
+    @include adaptiv-value("height", 10, 5, 0);
+    background-color: #423636;
+    border-radius: 10px;
   }
 }

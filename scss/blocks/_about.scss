@@ -2,15 +2,22 @@
   &__container {
     display: flex;
     flex-direction: column;
-    @include adaptiv-value("padding-top", 100, 0, 0);
+    @include adaptiv-value("padding-top", 100, 35, 0);
+    justify-content: center;
 
     h3 {
+      display: flex;
+      justify-content: center;
     }
 
     h2 {
+      display: flex;
+      justify-content: center;
     }
 
     p {
+      display: flex;
+      justify-content: center;
       @include adaptiv-value("padding-top", 19, 0, 0);
     }
   }

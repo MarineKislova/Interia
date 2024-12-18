@@ -2,15 +2,16 @@
   @include adaptiv-value("padding-top", 100, 35, 0);
   // padding-top: 100px;
   &__container {
-    background: url(/img/section-three-BG.png) no-repeat left/cover;
+    background: url(../img/section-three-BG.png) no-repeat left/cover;
     display: flex;
     flex-direction: column;
+    color: #e87d7d;
     align-items: center;
     @include adaptiv-value("border-top-right-radius", 100, 50, 0);
     @include adaptiv-value("gap", 29, 10, 0);
     @include adaptiv-value("padding-top", 61, 0, 0);
     @include adaptiv-value("padding-bottom", 69, 19, 0);
     @include adaptiv-value("padding-left", 512, 100, 0);
-    @include adaptiv-value("padding-right", 105, 15, 0);
+    @include adaptiv-value("padding-right", 105, 35, 0);
   }
 }
